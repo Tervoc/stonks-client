@@ -1,0 +1,18 @@
+.login-form-holder {
+	width: 45%;
+	padding: 20px;
+	background-color: #F5F5F5;
+	border-radius: 10px;
+	box-shadow: 5px 5px 15px 5px #DCDCDC;
+}
+
+.component-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	text-align: center;
+	margin: 10px;
+}

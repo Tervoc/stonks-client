@@ -1,0 +1,22 @@
+body {
+	padding-top: 60px;
+}
+
+h2 {
+	margin: 20px;
+	text-align: center;
+}
+
+.Announcement {
+	margin: 10px;
+}
+
+.form-buttons-loader {
+	display: flex;
+	align-items: center;
+	margin-top: 5px;
+}
+
+.form-buttons-loader > .spinner-border {
+	margin-left: 10px;
+}
