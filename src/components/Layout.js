@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container } from 'reactstrap';
+import React from 'react'
+import Container from 'react-bootstrap/Container'
 
 const Layout = (props) => {
 	return (

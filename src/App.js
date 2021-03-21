@@ -19,8 +19,8 @@ const App = () => {
 	const [cookies] = useCookies();
 
 	const checkToken = () => {
-        if(cookies['stockroom-token'] !== undefined) {
-            const user = jwt(cookies['stockroom-token']);
+        if(cookies['stonks-token'] !== undefined) {
+            const user = jwt(cookies['stonks-token']);
 
             if(user.exp * 1000 > Date.now()) {
                 return true;

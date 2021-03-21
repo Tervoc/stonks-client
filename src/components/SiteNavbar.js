@@ -11,7 +11,7 @@ const SiteNavbar = () => {
 				<Navbar.Brand>
 					<img
 						alt="Leonardo DRS Starburst"
-						src="/resources/images/logo-star.png"
+						src="/resources/images/crisp_head.png"
 						height="30"
 					/>{' '}
 					Internal Operating Plan

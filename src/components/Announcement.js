@@ -14,7 +14,7 @@ const Announcement = (props) => {
 				</Card.Text>
 			</Card.Body>
 			<Card.Footer>
-				{`Posted: ${format(new Date(props.timestamp), 'MM/dd/yyyy \'at\' hh:mm a')} by `}
+			{`Posted: ${format(new Date(props.timestamp), 'MM/dd/yyyy \'at\' hh:mm a')} by `}
 				<span style={{fontWeight: "500"}}>{props.userId}</span>
 			</Card.Footer>
 		</Card>

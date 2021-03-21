@@ -17,13 +17,13 @@ import Constants from '../Constants'
 
 const Login = () => {
 	const [validated, setValidated] = useState(false);
-	const [usernameFieldValue, setUsernameFieldValue] = useState('');
+	const [emailFieldValue, setEmailFieldValue] = useState('');
 	const [passwordFieldValue, setPasswordFieldValue] = useState('');
 
-	const [, setCookie] = useCookies(['stockroom-token']);
+	const [, setCookie] = useCookies(['stonks-token']);
 	const history = useHistory();
 
-	const handleUsernameChange = (event) => setUsernameFieldValue(event.target.value);
+	const handleEmailChange = (event) => setEmailFieldValue(event.target.value);
 	const handlePasswordChange = (event) => setPasswordFieldValue(event.target.value);
 
 	const handleSubmit = (event) => {
@@ -33,9 +33,9 @@ const Login = () => {
 		} else {			
 			event.preventDefault();
 			
-			axios.get(Constants.APIRoot + 'user/login?username=' + usernameFieldValue + '&password=' + passwordFieldValue)
+			axios.get(Constants.APIRoot + 'user/login?email=' + emailFieldValue + '&password=' + passwordFieldValue)
 			.then(function(response) {
-				setCookie('stockroom-token', response.data.token);
+				setCookie('stonks-token', response.data.token);
 
 				history.push('/');
 			})
@@ -54,17 +54,17 @@ const Login = () => {
 	return (
 		<div className="component-wrapper">
 			<div className="login-form-holder">
-				<Image src="resources/images/ece-logo.png" fluid/>
-				<h1>Stockroom</h1>
+				<Image src="resources/images/crisp_head_flat.png" fluid/>
+				<h1>Stonks</h1>
 
 				<Form noValidate validated={validated} onSubmit={handleSubmit}>
 					<Form.Group>
-						<Form.Label>Username</Form.Label>
+						<Form.Label>Email</Form.Label>
 						<Form.Control
 							type="text"	
-							placeholder={'red.raider'}
-							value={usernameFieldValue}
-							onChange={handleUsernameChange}
+							placeholder={'abc123@abc.com'}
+							value={emailFieldValue}
+							onChange={handleEmailChange}
 							required
 						/>
 						<Form.Control.Feedback type="invalid">Field cannot be empty.</Form.Control.Feedback>
